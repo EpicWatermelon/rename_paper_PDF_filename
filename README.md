@@ -1,5 +1,5 @@
-# rename_paper_title
-code for renaming papers' title using pdfminer3k
+# rename paper title
+code for renaming paper's title using pdfminer3k
 
 a tiny project
 
