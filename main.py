@@ -46,7 +46,6 @@ def CalcAvrPageFrontsize(char):
     line_num = 0
     for out in char:
         if isinstance(out, LTTextBoxHorizontal):
-            results = out.get_text()
             avrsize += CalcAvrLineFrontsize(out)
             line_num += 1
     avrpagefontsize =  avrsize / line_num
@@ -63,7 +62,7 @@ def CalcAvrLineFrontsize(char):
     avrlinefontsize = size / char_num
     return avrlinefontsize
 
-def RenamePDF():
+def Rename():
     list = os.listdir(root)
     if not list:
         raise print('There Is No PDF In This File')
@@ -90,4 +89,4 @@ i_dont_want_these_chars = ['/','\\',':','*','?','<','>','|']
 root = './pdf/'
 
 if __name__ == '__main__':
-    RenamePDF()
+    Rename()
