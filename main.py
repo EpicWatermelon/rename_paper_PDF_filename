@@ -20,7 +20,7 @@ def GetPDFName(root):
     doc.initialize('')
 
     if not doc.is_extractable:
-        raise PDFTextExtractionNotAllowed
+        raise RuntimeError('PDFTextExtractionNotAllowed')
 
     rsrcmgr = PDFResourceManager()
     laparams = LAParams()
@@ -65,7 +65,7 @@ def CalcAvrLineFrontsize(char):
 def Rename():
     list = os.listdir(root)
     if not list:
-        raise print('There Is No PDF In This File')
+        raise RuntimeError('There Is No PDF Available')
 
     dest_path = './pdf_renamed'
     if not os.path.exists(dest_path):
