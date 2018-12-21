@@ -74,7 +74,10 @@ def Rename():
 
     for pdf in list:
         path = root + pdf
-        title = GetPDFName(path)
+        try:
+            title = GetPDFName(path)
+        except:
+            continue
         title = title.replace("\n", " ")
         print('proccessing the pdf')
         for i in i_dont_want_these_chars:
