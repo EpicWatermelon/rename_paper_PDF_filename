@@ -5,4 +5,4 @@ code for renaming paper's pdf filename using pdfminer3k
 
 a tiny tool
 
-work for CV paper
+work on CV paper
